@@ -18,7 +18,7 @@
       <div class="col-md-6">
         <div class="btn-group">
           @can('view_users')
-          <a href="{{ url('user') }}" class="btn btn-danger"><i class="fa fa-sort-alpha-desc"></i> Listado</a>
+          <a href="{{ url('user') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
           @endcan
           @can('add_users')
           <a href="{{ url('user/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
@@ -58,7 +58,7 @@
                 <label for="role">Tipo de usuario</label>
                 <div class="checkbox icheck">
                   <label>
-                    <input type="radio" name="role" value="votante" {{ $user->hasRole('user') ? 'checked' : '' }}> Votante&nbsp;&nbsp;
+                    <input type="radio" name="role" value="votante" {{ $user->hasRole('user') ? 'checked' : '' }}> Usuario&nbsp;&nbsp;
                     <input type="radio" name="role" value="administrador" {{ $user->hasRole('admin') ? 'checked' : '' }}> Administrador
                   </label>
                 </div>

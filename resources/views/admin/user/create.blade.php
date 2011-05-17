@@ -17,10 +17,10 @@
       <div class="col-md-6">
         <div class="btn-group">
           @can('add_users')
-          <a href="{{ url('user') }}" class="btn btn-primary"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
+          <a href="{{ url('user') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
           @endcan
           @can('add_users')
-          <a href="{{ url('user/create') }}" class="btn btn-primary"><i class="fa fa-plus-square"></i> Ingresar</a>
+          <a href="{{ url('user/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
           @endcan
         </div>
       </div>
@@ -87,7 +87,7 @@
             </div>
             <div class="card-footer">
               <button type="submit" class="btn btn-danger ajax" id="submit">
-                <i id="ajax-icon" class="fas fa-spinner fa-pulse"></i> Ingresar
+                <i id="ajax-icon" class="fas fa-save"></i> Ingresar
               </button>
             </div>
        {!! Form::close()!!}

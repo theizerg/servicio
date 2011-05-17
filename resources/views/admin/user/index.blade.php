@@ -18,7 +18,7 @@
             <div class="col-md-6">
                 <div class="btn-group">
                 @can('add_users')
-                <a href="{{ url('user/create') }}" class="btn btn btn-primary"><i class="fa fa-plus-square"></i> Ingresar</a>
+                <a href="{{ url('user/create') }}" class="btn btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
                 @endcan
                 
                 </div>
@@ -51,9 +51,9 @@
                     <td>{{ $user->email  }}</td>
                     <td><span class="badge {{ $user->status ? 'green' : 'red' }}">{{ $user->display_status }}</span></td>
                     <td>
-                       <a class="btn btn-round blue darken-4" href="{{  url('user', [$user->encode_id]) }}"><i class="material-icons" style="color: white;">person</i> Perfil</a>
-                       <a class="btn btn-round red darken-4" href="{{ url('user', [$user->encode_id, 'edit']) }}"><i class="material-icons" style="color: white;">edit</i> Editar</a>
-                       <a class="btn btn-round green darken-4" href="{{ url('logins', [$user->encode_id]) }}"><i class="material-icons" style="color: white;">assessment</i> Logins</a>
+                       <a class="btn btn-round blue darken-4" href="{{  url('user', [$user->id]) }}"><i class="material-icons" style="color: white;">person</i> Perfil</a>
+                       <a class="btn btn-round red darken-4" href="{{ url('user', [$user->id, 'edit']) }}"><i class="material-icons" style="color: white;">edit</i> Editar</a>
+                       <a class="btn btn-round green darken-4" href="{{ url('logins', [$user->id]) }}"><i class="material-icons" style="color: white;">assessment</i> Logins</a>
                     </td>
                     </tr>
                     @endforeach

@@ -1,7 +1,7 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="sidebar-sticky pt-3">
         <div class="text-center">
-          <img src="{{('images/logo/logo_infotep.jpg')}}" height="50">
+          <img src="{{asset('images/logo/logo.png')}}" height="100">
         </div>
          <small class="mt-2" style="margin-left: 6em; font-style: bold; "> {{auth()->user()->full_name}} </small>
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">

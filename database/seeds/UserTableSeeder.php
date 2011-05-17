@@ -21,6 +21,7 @@ class UserTableSeeder extends Seeder
         $user = new User;
         $user->username = 'admin';
         $user->name = 'Theizer';
+        $user->nu_cedula = '25212293';
         $user->last_name = 'Gonzalez';
         $user->email = 'theizerg@gmail.com';
         $user->password = 'admin';

@@ -49,11 +49,11 @@
             </div>
             <div class="col-sm-3">
                 <strong>Estatus</strong><br>
-                <span class="badge {{ $user->status ? 'bg-green' : 'bg-red' }}">{{ $user->display_status }}</span>
+                <span class="badge {{ $user->status ? 'green' : 'red' }}">{{ $user->display_status }}</span>
             </div>
             <div class="col-sm-3">
                 <strong>Tipo de usuario</strong><br>
-                {{ Auth::user()->hasrole('administrador') ? 'Administrador' : 'Votante' }}
+                {{ Auth::user()->hasrole('admin') ? 'Administrador' : 'Usuario' }}
             </div>
         </div>
         <div class="row card-body  ">

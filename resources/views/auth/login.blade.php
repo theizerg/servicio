@@ -8,8 +8,7 @@
 
         <div class="col-md-6">
           <div class="text-center mt-5">
-           <h2 class="red-text mt-5">SAPCC</h2>
-             <small class="mt-3">SISTEMA AUTOMATIZADO PARA EL CONSEJO COMUNAL</small>
+          <img src="{{ asset('images/logo/logo-sin-fondo.png') }} " height="200">
           </div>
           <div class="card ml-5">
            <div class="title text-center">
