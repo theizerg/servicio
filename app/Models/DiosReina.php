@@ -27,7 +27,13 @@ class DiosReina extends Model
         'edificio_id',
         'estado_civil_id',
         'user_id',
-        'nb_nota'
+        'nb_nota',
+        'benf_bono_patria',
+        'benf_bolsas_clap',
+        'benf_hogares_patria',
+        'benf_bolsas_nutricion',
+        'benf_estado_desnutr icion',
+        'benf_bombonas_gas'
     ];
 
 
@@ -37,7 +43,7 @@ class DiosReina extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\Models\User', 'id');
     }
 
 
@@ -50,28 +56,28 @@ class DiosReina extends Model
 
      public function estadocivil()
     {
-        return $this->belongsTo('App\Models\EstadoCivil');
+        return $this->belongsTo('App\Models\EstadoCivil', 'id', 'id');
     }
 
 
      public function genero()
     {
-        return $this->belongsTo('App\Models\Genero');
+        return $this->belongsTo('App\Models\Genero', 'id');
     }
 
 
      public function nacionalidad()
     {
-        return $this->belongsTo('App\Models\Nacionalidad');
+        return $this->belongsTo('App\Models\Nacionalidad', 'id');
     }
 
      public function parentezco()
     {
-        return $this->belongsTo('App\Models\Parentezco');
+        return $this->belongsTo('App\Models\Parentezco', 'id');
     }
 
-     public function tipoidentificacion()
+     public function identidicacion()
     {
-        return $this->belongsTo('App\Models\TipoIdentificacion');
+        return $this->belongsTo('App\Models\TipoIdentificacion', 'id');
     }
 }

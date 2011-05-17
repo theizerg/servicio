@@ -108,11 +108,75 @@
     {!! Form::date('fe_nacimiento', null,array('class' => 'form-control input-sm','placeholder'=>'Nombres','id'=>'fe_nacimiento')) !!}
 	</div>
 </div>
+<div class="col-md-4">
+	<div class="form-group">
+        <label for="role">¿RECIBE LOS BONOS DE LA PATRIA?</label>
+        <div class="checkbox icheck">
+          <label>
+            <input type="radio" name="benf_bono_patria" value="1" checked> SÍ&nbsp;&nbsp;
+            <input type="radio" name="benf_bono_patria" value="0"> NO
+          </label>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+	<div class="form-group">
+        <label for="benf_bolsas_clap">¿RECIBE LA BOLSA DEL CLAP?</label>
+        <div class="checkbox icheck">
+          <label>
+            <input type="radio" name="benf_bolsas_clap" value="1" checked> SÍ&nbsp;&nbsp;
+            <input type="radio" name="benf_bolsas_clap" value="0"> NO
+          </label>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+	<div class="form-group">
+        <label for="benf_hogares_patria">¿RECIBE EL BONO DE HOGARES DE LA PATRIA?</label>
+        <div class="checkbox icheck">
+          <label>
+            <input type="radio" name="benf_hogares_patria" value="1" checked> SÍ&nbsp;&nbsp;
+            <input type="radio" name="benf_hogares_patria" value="0"> NO
+          </label>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+	<div class="form-group">
+        <label for="benf_bolsas_nutricion">¿RECIBE LA BOLSA DE NUTRICIÓN?</label>
+        <div class="checkbox icheck">
+          <label>
+            <input type="radio" name="benf_bolsas_nutricion" value="1" checked> SÍ&nbsp;&nbsp;
+            <input type="radio" name="benf_bolsas_nutricion" value="0"> NO
+          </label>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+	<div class="form-group">
+        <label for="benf_estado_desnutricion">¿ESTÁ EN ESTADO DE DESNUTRICIÓN?</label>
+        <div class="checkbox icheck">
+          <label>
+            <input type="radio" name="benf_estado_desnutricion" value="1" checked> SÍ&nbsp;&nbsp;
+            <input type="radio" name="benf_estado_desnutricion" value="0"> NO
+          </label>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+	<div class="form-group">
+        <label for="benf_bombonas_gas">¿RECIBE LAS BOMBONAS DEL GAS?</label>
+        <div class="checkbox icheck">
+          <label>
+            <input type="radio" name="benf_bombonas_gas" value="1" checked> SÍ&nbsp;&nbsp;
+            <input type="radio" name="benf_bombonas_gas" value="0"> NO
+          </label>
+        </div>
+    </div>
+</div>
 <div class="col-md-12 mt-2">
    <div class="form-group">
 	<label class="" for="txtFecha">Nota</label><br>
 	  {!! Form::textarea('nb_nota', null,array('class' => 'form-control input-sm','placeholder'=>'Ingrese alguna nota','id'=>'nb_nota')) !!}
     </div>
  </div>
-
- <button type="submit"></button>

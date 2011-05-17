@@ -23,8 +23,8 @@
                 <h3 class="card-title">Datos del consejo comunal <small class="red-text float-right">Dios Reina</small></h3>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
-                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                <div class="card-body  table-responsive">
+                <table id="example" class="table table-striped table-bordered">
                     <thead>
                     <tr>
                     <th>#</th>
@@ -46,8 +46,9 @@
                     <td>{{ $reina->nro_familia  }}</td>
                     <td>{{ $reina->nro_familia_edificio }}</td>
                     <td>{{ $reina->edificio->nb_edificio }}</td>
-                    <td>{{ $reina->edificio->nb_nota }}</td>
+                    <td>{{ $reina->nb_nota }}</td>
                     <td>
+                      <a class="btn btn-round yellow darken-4" href="{{  url('reina', [$reina->id,'imprimir']) }}"><i class="material-icons" style="color: white;">print</i> Perfil</a>
                        <a class="btn btn-round blue darken-4" href="{{  url('reina', [$reina->id]) }}"><i class="material-icons" style="color: white;">person</i> Perfil</a>
                        <a class="btn btn-round red darken-4" href="{{ url('reina', [$reina->id, 'edit']) }}"><i class="material-icons" style="color: white;">edit</i> Editar</a>
                     </td>

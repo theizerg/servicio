@@ -13,15 +13,15 @@ class EstadoCivil extends Model
 
 
 
-
-   /*
+ /*
     |
     | ** Relationships model **
     |
     */
 
-    public function diosreina()
+    public function dios()
     {
         return $this->hasMany('App\Models\DiosReina');
     }
+  
 }

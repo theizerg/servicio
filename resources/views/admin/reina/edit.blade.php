@@ -1,15 +1,8 @@
 @extends('layouts.admin')
 
 @section('title', 'Dios Reina')
-@section('page_title', 'Dios Reina')
+@section('page_title', 'Editar los datos generados')
 @section('page_subtitle', 'Ingresar')
-
-@section('breadcrumb')
-    @parent
-    <li><a href="{{ url('/') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-    <li><a href="{{ url('user') }}">usuarios</a></li>
-    <li class="active">Ingresar</li>
-@endsection
 
 @section('content')
  <div class="container">
@@ -32,10 +25,7 @@
           <div class="title red-text text-center mt-4">
             Datos para el consejo comunal
           </div>
-           <form id="main-form" class=""><br>
-            <input type="hidden" id="_url" value="{{ url('reina') }}">
-            <input type="hidden" id="_redirect" value="{{ url('reina') }}">
-            <input type="hidden" id="_token" value="{{ csrf_token() }}">
+           {!! Form::model($reina,  ['route' => ['reina.update',$reina->id],'id'=>'main-form' ,'method' => 'PUT'])!!}
            <div class="card-body">
              <div class="row form-group">
                @include('admin.reina.partials.nuevo')
@@ -49,7 +39,7 @@
                                               
                   </div>
               </div>
-           </form>
+            {!! Form::close()!!}
            </div> 
         </div>
       </div>
@@ -188,15 +178,5 @@ $(document).ready(function () {
   });
 
 });
-</script>
-<script src="{{ asset('js/admin/reina/create.js') }}"></script>
-<script>
-      $(function () {
-        $('input').iCheck({
-          checkboxClass: 'icheckbox_square-blue',
-          radioClass: 'iradio_square-blue',
-          increaseArea: '20%' // optional
-        });
-      });
 </script>
 @endpush

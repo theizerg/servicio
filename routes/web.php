@@ -29,6 +29,6 @@ Route::middleware(['auth',])->group(function () {
     Route::resource('permissions', 'PermissionController');
 
     Route::resource('reina', 'DiosReinaController');
-
+    Route::get('reina/{id}/imprimir', 'DiosReinaController@imprimir');
 
 });
