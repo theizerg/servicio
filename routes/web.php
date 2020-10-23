@@ -28,5 +28,7 @@ Route::middleware(['auth',])->group(function () {
     Route::resource('logins', 'LoginController');
     Route::resource('permissions', 'PermissionController');
 
+    Route::resource('reina', 'DiosReinaController');
+
 
 });

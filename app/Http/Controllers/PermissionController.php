@@ -12,7 +12,7 @@ class PermissionController extends Controller
 
     public function index()
     {
-        $role = Role::findByName('votante');
+        $role = Role::findByName('admin');
 
         return view('admin.permission.index', ['role' => $role]);
     }

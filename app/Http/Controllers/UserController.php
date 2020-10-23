@@ -13,6 +13,13 @@ class UserController extends Controller
 {
 
   
+   public function __construct()
+    {
+        $this->middleware('permission:add_users')->only('store');
+        $this->middleware('permission:edit_users')->only('update');
+        $this->middleware('permission:delete_users')->only('destroy');
+        $this->middleware('ajax', ['only' => ['store', 'update', 'destroy']]);
+    }
 
 
 

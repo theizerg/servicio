@@ -34,7 +34,7 @@
                    </div>
                     <div class="md-form row mb-3">
                         <div class="col-md-12">
-                            <button type="submit" class="btn red form-control">
+                            <button type="submit" class="btn red form-control" id="boton">
                                 <i class="fas fa-sign-in-alt text-white" id="ajax-icon"></i> <span class="text-white ml-3">{{ __('Iniciar Sesión') }}</span>
                             </button>                           
                         </div>
