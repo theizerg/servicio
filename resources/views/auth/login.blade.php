@@ -8,8 +8,8 @@
 
         <div class="col-md-6">
           <div class="text-center mt-5">
-             <img src="{{('images/logo/logo_infotep.jpg')}}" height="100">
-             <h5 class="mt-3">Instituto Nacional De Formación Técnica Profesional</h5>
+           <h2 class="red-text mt-5">SAPCC</h2>
+             <small class="mt-3">SISTEMA AUTOMATIZADO PARA EL CONSEJO COMUNAL</small>
           </div>
           <div class="card ml-5">
            <div class="title text-center">
@@ -35,7 +35,7 @@
                    </div>
                     <div class="md-form row mb-3">
                         <div class="col-md-12">
-                            <button type="submit" class="btn blue darken-4 form-control">
+                            <button type="submit" class="btn red form-control">
                                 <i class="fas fa-sign-in-alt text-white" id="ajax-icon"></i> <span class="text-white ml-3">{{ __('Iniciar Sesión') }}</span>
                             </button>                           
                         </div>
