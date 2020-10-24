@@ -14,7 +14,7 @@ class CreateEdificiosTable extends Migration
     public function up()
     {
         Schema::create('edificio', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('nb_edificio');
             $table->softDeletes();
             $table->timestamps();

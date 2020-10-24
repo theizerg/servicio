@@ -14,7 +14,7 @@ class CreateTipoIdentificacionsTable extends Migration
     public function up()
     {
         Schema::create('tipo_identificacion', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('nb_tipo_identificacion');   
             $table->softDeletes();
             $table->timestamps();

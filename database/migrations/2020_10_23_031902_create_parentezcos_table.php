@@ -14,7 +14,7 @@ class CreateParentezcosTable extends Migration
     public function up()
     {
         Schema::create('parentezco', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('nb_parentezco');
             $table->softDeletes();
             $table->timestamps();

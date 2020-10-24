@@ -94,9 +94,20 @@ class UserTableSeeder extends Seeder
         $parent->save();
 
         $parent = new Parentezco;
-        $parent->nb_parentezco = 'SBRINO(A)';
+        $parent->nb_parentezco = 'SOBRINO(A)';
+        $parent->save();
+         
+        $parent = new Parentezco;
+        $parent->nb_parentezco = 'AMIGO';
         $parent->save();
 
+        $parent = new Parentezco;
+        $parent->nb_parentezco = 'CONCUBINO';
+        $parent->save();
+
+        $parent = new Parentezco;
+        $parent->nb_parentezco = 'PAREJA';
+        $parent->save();
 
         $parent = new Parentezco;
         $parent->nb_parentezco = 'PRIMO(A)';

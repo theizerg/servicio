@@ -14,7 +14,7 @@ class CreateTipoConsejoComunalsTable extends Migration
     public function up()
     {
         Schema::create('tipo_consejo_comunal', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('nb_consejo_comunal');
             $table->softDeletes();
             $table->timestamps();

@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\DiosReina;
+use App\Models\Edificio;
+use App\Models\EstadoCivil;
+use App\Models\Genero;
+use App\Models\Nacionalidad;
+use App\Models\Parentezco;
+use App\Models\TipoIdentificacion;
 use Illuminate\Http\Request;
 
 class DiosReinaController extends Controller
@@ -15,8 +21,8 @@ class DiosReinaController extends Controller
     public function index()
     {
         
-        $reina = DiosReina::get();
-        return view('admin.reina.index', compact('reina'));
+        $reinas = DiosReina::get();
+        return view('admin.reina.index', compact('reinas'));
     }
 
     /**
@@ -26,7 +32,21 @@ class DiosReinaController extends Controller
      */
     public function create()
     {
-        //
+        $reina          = DiosReina::get();
+        $edificio       = Edificio::get();
+        $civil          = EstadoCivil::get();
+        $genero         = Genero::get();
+        $nacionalidades = Nacionalidad::get();
+        $parentezco     = Parentezco::get();
+        $tipoI          = TipoIdentificacion::get();
+
+         return view('admin.reina.create',compact(  'reina',
+                                                    'edificio',
+                                                    'civil',
+                                                    'genero',
+                                                    'nacionalidades',
+                                                    'parentezco',
+                                                    'tipoI'));
     }
 
     /**
@@ -37,7 +57,7 @@ class DiosReinaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
