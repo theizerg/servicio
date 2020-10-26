@@ -165,7 +165,7 @@
 </div>
 <div class="col-md-4">
 	<div class="form-group">
-        <label for="benf_bombonas_gas">¿RECIBE LAS BOMBONAS DEL GAS?</label>
+        <label for="benf_bombonas_gas">¿RECIBE LAS BOMBONAS DEL GAS COMUNAL?</label>
         <div class="checkbox icheck">
           <label>
             <input type="radio" name="benf_bombonas_gas" value="1" checked> SÍ&nbsp;&nbsp;
