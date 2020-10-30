@@ -15,9 +15,6 @@ class Edificio extends Model
 
 
 
-
-
-
     /*
     |
     | ** Relationships model **

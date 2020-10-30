@@ -36,7 +36,89 @@ class UserTableSeeder extends Seeder
         $edificio->nb_edificio = 'CENTRO OMNI';
         $edificio->save();
 
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'DR. PAUL';
+        $edificio->save();
 
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'MARISCAL SUCRE';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'PORTUGAL';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'SEGUROS CARACAS';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'CENTRO 83';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'SOD';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'ALIVERT';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'KIRIPITAL';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'MANHATTAN';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'BOLIVAR';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'TORRE CUJÍ';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'SOFIA';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'LA PARRA';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'YAMIN';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'SAN CARLOS';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'EL SABAL';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'SAN JORGE';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'TARMA';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = '8A';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'BOYACA';
+        $edificio->save();
+
+        $edificio = new Edificio;
+        $edificio->nb_edificio = 'CARIBE';
+        $edificio->save();
 
         $estado = new EstadoCivil;
         $estado->nb_estado_civil = 'SOLTERO(A)';

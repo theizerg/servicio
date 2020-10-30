@@ -6,7 +6,7 @@
 		              </h3>
 		            </div>
 		            <div class="card-body">
-		              <h4 class="float-right mt-3" style="font-size:2em">24</h4>
+		              <h4 class="float-right mt-3" style="font-size:2em">{{ $damas1 }}</h4>
 		              <i class="fas fa-female float-left" style="font-size: 4em; color: #f44336;"></i>
 		            </div>
 		          </div>
@@ -19,7 +19,7 @@
 	                    </h3>
 	                  </div>
 	                   <div class="card-body">
-	                  <h4 class="float-right mt-3" style="font-size:2em">24</h4>
+	                  <h4 class="float-right mt-3" style="font-size:2em">{{ $caballeros1 }}</h4>
 	                  <i class="fas fa-male float-left" style="font-size: 4em; color: #f44336;"></i>
 	                  </div>
 	                </div>
@@ -32,7 +32,7 @@
 	                    </h3>
 	                  </div>
 	                   <div class="card-body">
-	                  <h4 class="float-right mt-3" style="font-size:2em">24</h4>
+	                  <h4 class="float-right mt-3" style="font-size:2em">{{ $jovenes1  }}</h4>
 	                  <i class="fas fa-users float-left" style="font-size: 4em; color: #f44336;"></i>
 	                  </div>
 	                </div>

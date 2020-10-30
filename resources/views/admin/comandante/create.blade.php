@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Dios Reina')
-@section('page_title', 'Dios Reina')
+@section('title', 'Comandante')
+@section('page_title', 'Tras los pasos del comandante')
 @section('page_subtitle', 'Ingresar')
 
 @section('breadcrumb')
@@ -17,10 +17,10 @@
       <div class="col-md-6">
         <div class="btn-group">
           @can('add_users')
-          <a href="{{ url('reina') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
+          <a href="{{ url('comandante') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
           @endcan
           @can('add_users')
-          <a href="{{ url('reina/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
+          <a href="{{ url('comandante/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
           @endcan
         </div>
       </div> 
@@ -33,8 +33,8 @@
             Datos para el consejo comunal
           </div>
            <form id="main-form" class=""><br>
-            <input type="hidden" id="_url" value="{{ url('reina') }}">
-            <input type="hidden" id="_redirect" value="{{ url('reina') }}">
+            <input type="hidden" id="_url" value="{{ url('comandante') }}">
+            <input type="hidden" id="_redirect" value="{{ url('comandante') }}">
             <input type="hidden" id="_token" value="{{ csrf_token() }}">
            <div class="card-body">
              <div class="row form-group">

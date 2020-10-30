@@ -53,14 +53,14 @@
         <ul class="nav flex-column mb-2">
           <li class="nav-item">
             <a class="nav-link" href="{{ route('reina.index') }} ">
-              <span class="fas fa-users"></span>
+              <span class="fas fa-crown"></span>
               Dios Reina
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Last quarter
+             <a class="nav-link" href="{{ route('comandante.index') }} ">
+              <span class="fas fa-user-tie"></span>
+              Pasos del comandante
             </a>
           </li>
           <li class="nav-item">

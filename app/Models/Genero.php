@@ -9,10 +9,6 @@ class Genero extends Model
       public $table = 'genero';
 
 
-
-
-
-
 	
 	
       

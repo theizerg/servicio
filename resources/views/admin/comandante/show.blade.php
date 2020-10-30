@@ -1,6 +1,6 @@
     @extends('layouts.admin')
 
-    @section('title', 'reina')
+    @section('title', 'Comandante')
     @section('page_title', 'Listado')
     @section('page_subtitle', 'Datos del miembro del consejo comunal')
 
@@ -11,10 +11,10 @@
         <div class="col-md-6">
             <div class="btn-group">
             @can('add_users')
-            <a href="{{ url('reina') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
+            <a href="{{ url('comandante') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
             @endcan
             @can('add_users')
-            <a href="{{ url('reina/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
+            <a href="{{ url('comandante/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
             @endcan
             </div>
         </div>
@@ -25,68 +25,68 @@
             <div class=" card-header">
             <h2 class="card-title">
                 <i class="fa fa-user"></i> Datos de usuario
-                <small class="float-right red-text">{{ $reina->nb_nombres }} {{ $reina->nb_apellidos }}</small>
+                <small class="float-right red-text">{{ $comandante->nb_nombres }} {{ $comandante->nb_apellidos }}</small>
             </h2>
          </div>
             <div class="row card-body">
                <div class="col-sm-3">
                 <strong>Nombre completo</strong><br>
-                {{ $reina->nb_nombres }} {{ $reina->nb_apellidos }}
+                {{ $comandante->nb_nombres }} {{ $comandante->nb_apellidos }}
               </div>
                <div class="col-sm-3">
                  <strong>Cédula</strong>
                  <br>
-                 {{ $reina->identidicacion->nb_tipo_identificacion }}- {{ $reina->nu_cedula }}
+                 {{ $comandante->identidicacion->nb_tipo_identificacion }}- {{ $comandante->nu_cedula }}
                </div>
                <div class="col-sm-3">
                  <strong>Nro de familia</strong>
                  <br>
-                 {{ $reina->nro_familia }}
+                 {{ $comandante->nro_familia }}
                </div>
                <div class="col-sm-3">
                  <strong>Nro de edificio por familia</strong>
                  <br>
-                 {{ $reina->nro_familia_edificio }}
+                 {{ $comandante->nro_familia_edificio }}
                </div>
                <div class="col-sm-3 mt-3">
                  <strong>Edad</strong>
                  <br>
-                 {{ $reina->nu_edad }}
+                 {{ $comandante->nu_edad }}
                </div>
                <div class="col-sm-3 mt-3">
                  <strong>Fecha de nacimiento</strong>
                  <br>
-                 {{ $reina->fe_nacimiento }}
+                 {{ $comandante->fe_nacimiento }}
                </div>
                <div class="col-sm-3 mt-3">
                  <strong>Nacionalidad</strong>
                  <br>
-                 {{ $reina->nacionalidad->nb_nacionalidad }}
+                 {{ $comandante->nacionalidad->nb_nacionalidad }}
                </div>
                <div class="col-sm-3 mt-3">
                  <strong>Género</strong>
                  <br>
-                 {{ $reina->genero->nb_genero }}
+                 {{ $comandante->genero->nb_genero }}
                </div>
                 <div class="col-sm-3 mt-3">
                  <strong>Parentezco</strong>
                  <br>
-                 {{ $reina->parentezco->nb_parentezco }}
+                 {{ $comandante->parentezco->nb_parentezco }}
                </div>
                <div class="col-sm-3 mt-3">
                  <strong>Edificio</strong>
                  <br>
-                 {{ $reina->edificio->nb_edificio }}
+                 {{ $comandante->edificio->nb_edificio }}
                </div>
                <div class="col-sm-3 mt-3">
                  <strong>Estado Civil</strong>
                  <br>
-                 {{ $reina->estadocivil->nb_estado_civil }}
+                 {{ $comandante->estadocivil->nb_estado_civil }}
                </div><br>
                <div class="col-sm-12 mt-3">
                  <strong>Nota</strong>
                  <br>
-                 {{ $reina->nb_nota }}
+                 {{ $comandante->nb_nota }}
                </div>
                <div class="col-md-12">
                  <h3 class="text-center">
@@ -97,43 +97,43 @@
                 <strong>
                   ¿Recibe bonos de la patria?
                 </strong><br>
-                  <span class="badge {{ $reina->benf_bono_patria ? 'green' : 'red' }}">{{ $reina->display_bono }}</span>
+                  <span class="badge {{ $comandante->benf_bono_patria ? 'green' : 'red' }}">{{ $comandante->display_bono }}</span>
               </div>
               <div class="col-sm-4 mt-3">
                 <strong>
                   ¿Recibe la bolsa del CLAP?
                 </strong><br>
-                  <span class="badge {{ $reina->benf_bolsas_clap ? 'green' : 'red' }}">{{ $reina->display_clap }}</span>
+                  <span class="badge {{ $comandante->benf_bolsas_clap ? 'green' : 'red' }}">{{ $comandante->display_clap }}</span>
               </div>
               <div class="col-sm-4 mt-3">
                 <strong>
                   ¿Recibe el bono de HOGARES DE LA PATRIA?
                 </strong><br>
-                   <span class="badge {{ $reina->benf_hogares_patria ? 'green' : 'red' }}">{{ $reina->display_hogares }}</span>
+                   <span class="badge {{ $comandante->benf_hogares_patria ? 'green' : 'red' }}">{{ $comandante->display_hogares }}</span>
               </div>
               <div class="col-sm-3 mt-3">
                 <strong>
                   ¿Está en estado de desnutrición?
                 </strong><br>
-                   <span class="badge {{ $reina->benf_bolsas_nutricion ? 'green' : 'red' }}">{{ $reina->display_desnutricion }}</span>
+                   <span class="badge {{ $comandante->benf_bolsas_nutricion ? 'green' : 'red' }}">{{ $comandante->display_desnutricion }}</span>
               </div>
               <div class="col-sm-3 mt-3">
                 <strong>
                  ¿Recibe la bolsa de NUTRICIÓN?
                 </strong><br>
-                   <span class="badge {{ $reina->benf_estado_desnutricion ? 'green' : 'red' }}">{{ $reina->display_desbolsa }}</span>
+                   <span class="badge {{ $comandante->benf_estado_desnutricion ? 'green' : 'red' }}">{{ $comandante->display_desbolsa }}</span>
               </div>
                <div class="col-sm-3 mt-3">
                 <strong>
                  ¿Recibe Gas comunal?
                 </strong><br>
-                   <span class="badge {{ $reina->benf_bombonas_gas ? 'green' : 'red' }}">{{ $reina->display_gas }}</span>
+                   <span class="badge {{ $comandante->benf_bombonas_gas ? 'green' : 'red' }}">{{ $comandante->display_gas }}</span>
               </div>
                <div class="col-sm-3 mt-3">
                 <strong>
                  Cantidad de bombonas
                 </strong><br>
-                   <span> {{ $reina->nu_cantidad_bombonas }}</span>
+                   <span> {{ $comandante->nu_cantidad_bombonas }}</span>
               </div>
             </div>
          </div>

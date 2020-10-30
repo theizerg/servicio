@@ -8,11 +8,7 @@ class EstadoCivil extends Model
 {
       public $table = 'estado_civil';
 
-
-
-
-
-
+  
  /*
     |
     | ** Relationships model **

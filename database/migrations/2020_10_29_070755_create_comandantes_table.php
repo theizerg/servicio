@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDiosReinasTable extends Migration
+class CreateComandantesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateDiosReinasTable extends Migration
      */
     public function up()
     {
-        Schema::create('dios_reina', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('comandante', function (Blueprint $table) {
+            $table->Increments('id');
             $table->string('nb_nombres');
             $table->string('nb_apellidos');
             $table->string('nu_cedula');
@@ -63,6 +63,6 @@ class CreateDiosReinasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dios_reina');
+        Schema::dropIfExists('comandante');
     }
 }

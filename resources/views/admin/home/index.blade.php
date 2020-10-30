@@ -46,14 +46,14 @@
         '0-2',
         '2-4',
         '4-6',
-        '8-10'
+        '6-10'
       ],
       datasets: [{
         data: [
-          45339,
-          37034,
-          63212,
-          43212
+          '{{ $niños1 }}',
+          '{{ $niños2 }}',
+          '{{ $niños3 }}',
+          '{{ $niños4 }}'
         ],
         lineTension: 0,
         backgroundColor: 'transparent',
@@ -92,11 +92,10 @@
       ],
       datasets: [{
         data: [
-          45339,
-          37034,
-          63212,
-          43212
-        ],
+          '{{ $niños5 }}',
+          '{{ $niños6 }}',
+          '{{ $niños7 }}',
+          '{{ $niños8 }}'        ],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#f44336',

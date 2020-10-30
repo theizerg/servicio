@@ -31,4 +31,7 @@ Route::middleware(['auth',])->group(function () {
     Route::resource('reina', 'DiosReinaController');
     Route::get('reina/{id}/imprimir', 'DiosReinaController@imprimir');
 
+    Route::resource('comandante', 'ComandanteController');
+    Route::get('comandante/{id}/imprimir', 'ComandanteController@imprimir');
+
 });

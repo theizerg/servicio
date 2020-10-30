@@ -10,10 +10,6 @@ class Parentezco extends Model
 
 
 
-
-
-
-
       
    /*
     |

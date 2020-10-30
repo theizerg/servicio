@@ -4,10 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class DiosReina extends Model
+class Comandante extends Model
 {
-    
-    public $table = 'dios_reina';
+      public $table = 'comandante';
 
     
     protected $dates = ['deleted_at'];
@@ -121,7 +120,4 @@ class DiosReina extends Model
  
         return $this->benf_bombonas_gas == 1 ? 'SÍ' : 'NO';
     }
-
-
-
 }
