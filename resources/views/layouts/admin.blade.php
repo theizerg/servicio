@@ -105,7 +105,21 @@
         .appendTo( '#example_wrapper .col-md-6:eq(0)' );
 } );
 </script>
-   
+<br><br><br><br><br><br>
+ <footer class="page-footer indigo darken-2 center-on-small-only pt-0 mt-0"  style=" background:linear-gradient(to right,#f44336,#d32f2f,#b71c1c);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="mb-5 flex-center" style="margin-left: 15rem !important;"><a class="px-3"><i class="fab fa-facebook fa-lg white-text"></i></a><a class="px-3"><i class="fab fa-twitter fa-lg white-text"></i></a><a class="px-3"><i class="fab fa-google-plus fa-lg white-text"></i></a><a class="px-3"><i class="fab fa-instagram fa-lg white-text"></i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container-fluid">
+          <p>&copy; <a href="https://instagram.com/theizerg"  style="margin-left: 37rem !important;">Theizer Gonzalez</a> - Diseñador web: <a href="https://instagram.com/theizerg" target="_blank">derechos reservados 2020</a></p>
+        </div>
+      </div>
+    </footer>
     @stack('scripts')
 
   </body>
