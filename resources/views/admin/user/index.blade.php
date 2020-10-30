@@ -47,7 +47,7 @@
                     <tr class="row{{ $user->id }}">
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->name }} {{ $user->last_name }}</td>
-                    <td>{!! $user->hasRole('administrador') ? '<b>Administrador</b>' : 'votante' !!}</td>
+                    <td>{!! $user->hasRole('admin') ? '<b>Administrador</b>' : 'Usuario' !!}</td>
                     <td>{{ $user->email  }}</td>
                     <td><span class="badge {{ $user->status ? 'green' : 'red' }}">{{ $user->display_status }}</span></td>
                     <td>

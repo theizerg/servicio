@@ -34,7 +34,7 @@ class HomeController extends Controller
 
     public function index()
     {
-      
+       
        
         
         $damas = \DB::table('dios_reina')

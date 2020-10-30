@@ -42,7 +42,7 @@
                 </form>
               </div>
               <div class="text-center mt-3 ml-5">
-                 <p>&copy; 2019 Todos los derechos reservados.</a></p>
+                 <p>&copy; 2020 Todos los derechos reservados.</a></p>
               </div>
           </div>
       </div>
