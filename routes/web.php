@@ -34,4 +34,7 @@ Route::middleware(['auth',])->group(function () {
     Route::resource('comandante', 'ComandanteController');
     Route::get('comandante/{id}/imprimir', 'ComandanteController@imprimir');
 
+    Route::resource('maria', 'MariaController');
+    Route::get('maria/{id}/imprimir', 'MariaController@imprimir');
+
 });

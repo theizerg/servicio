@@ -89,22 +89,56 @@ class HomeController extends Controller
 
          $niños5 = \DB::table('comandante')
         ->where('nu_edad','>=',0)
-        ->where('nu_edad','=<',2)
+        ->where('nu_edad','<',2)
         ->count();
 
          $niños6 = \DB::table('comandante')
         ->where('nu_edad','>=',2)
-        ->where('nu_edad','=<',4)
+        ->where('nu_edad','<',4)
         ->count();
 
          $niños7 = \DB::table('comandante')
         ->where('nu_edad','>=',4)
-        ->where('nu_edad','=<',6)
+        ->where('nu_edad','<',6)
         ->count();
 
          $niños8 = \DB::table('comandante')
         ->where('nu_edad','>=',6)
-        ->where('nu_edad','=<',10)
+        ->where('nu_edad','<',10)
+        ->count();
+
+
+         $damas2 = \DB::table('maria')
+        ->where('genero_id',2)
+        ->count();
+
+        $caballeros2= \DB::table('maria')
+        ->where('genero_id',1)
+        ->count();
+
+        $jovenes2 = \DB::table('maria')
+        ->where('nu_edad','>=',15)
+        ->where('nu_edad','=<',30)
+        ->count();
+
+         $niños9 = \DB::table('maria')
+        ->where('nu_edad','>=',0)
+        ->where('nu_edad','<',2)
+        ->count();
+
+         $niños10 = \DB::table('maria')
+        ->where('nu_edad','>=',2)
+        ->where('nu_edad','<',4)
+        ->count();
+
+         $niños11 = \DB::table('maria')
+        ->where('nu_edad','>=',4)
+        ->where('nu_edad','<',6)
+        ->count();
+
+         $niños12 = \DB::table('maria')
+        ->where('nu_edad','>=',6)
+        ->where('nu_edad','<',10)
         ->count();
 
 
@@ -122,10 +156,17 @@ class HomeController extends Controller
             'damas1'      => $damas1,
             'caballeros1' => $caballeros1,
             'jovenes1'    => $jovenes1,
-            'niños5'     => $niños5,
-            'niños6'     => $niños6,
-            'niños7'     => $niños7,
-            'niños8'     => $niños8
+            'niños5'      => $niños5,
+            'niños6'      => $niños6,
+            'niños7'      => $niños7,
+            'niños8'      => $niños8,
+            'damas2'      => $damas2,
+            'caballeros2' => $caballeros2,
+            'jovenes2'    => $jovenes2,
+            'niños9'      => $niños9,
+            'niños10'      => $niños10,
+            'niños11'      => $niños11,
+            'niños12'      => $niños12
 
 
         ]);
