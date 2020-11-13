@@ -190,33 +190,5 @@ $(document).ready(function () {
 });
 </script>
 <script src="{{ asset('js/admin/reina/create.js') }}"></script>
-<script>
-      $(function () {
-        $('input').iCheck({
-          checkboxClass: 'icheckbox_square-blue',
-          radioClass: 'iradio_square-blue',
-          increaseArea: '20%' // optional
-        });
-      });
-</script>
-<script>
-  $(document).ready(function(){
 
-   $("#benf_bombonas_gas").val() == 0;
-
-   $("#bombonas").hide();
-
-
-    $("#benf_bombonas_gas").on('change', function(){
-        if($("#benf_bombonas_gas").val() == 1){
-          $("#bombonas").show();
-          $("#bombonas").val(1);
-        } else {
-           $("#bombonas").show();
-           $("#bombonas").val(0);
-        }
-      });
-      
-});
-</script>
 @endpush

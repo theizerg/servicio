@@ -33,7 +33,7 @@
                     <th>Nro.Familia</th>
                     <th>Nro.Edificio</th>
                     <th>Edificio</th>
-                    <th>Nota</th>
+                    <th>Status</th>
                     <th>Opciones</th>
                     </tr>
                     </thead>
@@ -46,11 +46,58 @@
                     <td>{{ $reina->nro_familia  }}</td>
                     <td>{{ $reina->nro_familia_edificio }}</td>
                     <td>{{ $reina->edificio->nb_edificio }}</td>
-                    <td>{{ $reina->nb_nota }}</td>
+                    <td><span class="badge {{ $reina->status ? 'green' : 'red' }}">{{ $reina->display_status }}</span></td>
                     <td>
                       <a class="btn btn-round yellow darken-4" href="{{  url('maria', [$reina->id,'imprimir']) }}"><i class="material-icons" style="color: white;">print</i> Perfil</a>
                        <a class="btn btn-round blue darken-4" href="{{  url('maria', [$reina->id]) }}"><i class="material-icons" style="color: white;">person</i> Perfil</a>
                        <a class="btn btn-round red darken-4" href="{{ url('maria', [$reina->id, 'edit']) }}"><i class="material-icons" style="color: white;">edit</i> Editar</a>
+                    </td>
+                    </tr>
+                    @endforeach
+                    </tr>
+                    </tbody>                
+                </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+        
+        </div>
+        <div class="container">
+           
+        <br>
+        <div class="card card-danger card-outline">
+                <div class=" card-header">
+                <h3 class="card-title">Datos del consejo comunal <small class="red-text float-right">Tras los pasos del comandante</small></h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body  table-responsive">
+                <table id="inactivos" class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Cédula</th>
+                    <th>Nro.Familia</th>
+                    <th>Nro.Edificio</th>
+                    <th>Edificio</th>
+                    <th>status</th>
+                    <th>Opciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($inactivos as $inactivo)
+                    <tr class="row{{ $inactivo->id }}">
+                    <td>{{ $inactivo->id }}</td>
+                    <td>{{ $inactivo->nb_nombres }} {{ $inactivo->nb_apellidos }}</td>
+                    <td>{{ $inactivo->nu_cedula }}</td>
+                    <td>{{ $inactivo->nro_familia  }}</td>
+                    <td>{{ $inactivo->nro_familia_edificio }}</td>
+                    <td>{{ $inactivo->edificio->nb_edificio }}</td>
+                    <td><span class="badge {{ $inactivo->status ? 'green' : 'red' }}">{{ $inactivo->display_status }}</span></td>
+                    <td>
+                      <a class="btn btn-round yellow darken-4" href="{{  url('maria', [$inactivo->id,'imprimir']) }}"><i class="material-icons" style="color: white;">print</i> Perfil</a>
+                       <a class="btn btn-round blue darken-4" href="{{  url('maria', [$inactivo->id]) }}"><i class="material-icons" style="color: white;">person</i> Perfil</a>
+                       <a class="btn btn-round red darken-4" href="{{ url('maria', [$inactivo->id, 'edit']) }}"><i class="material-icons" style="color: white;">edit</i> Editar</a>
                     </td>
                     </tr>
                     @endforeach

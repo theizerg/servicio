@@ -51,6 +51,7 @@ class CreateMariasTable extends Migration
             $table->smallInteger('benf_bombonas_gas');
             $table->smallInteger('nu_cantidad_bombonas')->default(0);
             $table->string('nb_nota')->nullable();
+            $table->integer('status')->defautl(0);
             $table->softDeletes();
             $table->timestamps();
         });

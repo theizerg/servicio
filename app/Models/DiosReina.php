@@ -34,7 +34,8 @@ class DiosReina extends Model
         'benf_bolsas_nutricion',
         'benf_estado_desnutricion',
         'benf_bombonas_gas',
-        'nu_cantidad_bombonas'
+        'nu_cantidad_bombonas',
+        'status'
     ];
 
 
@@ -81,7 +82,11 @@ class DiosReina extends Model
 
 
 
-
+       public function getDisplayStatusAttribute()
+    {
+        return $this->status == 1 ? 'Activo' : 'Denegado';
+    }
+    
      public function getDisplayBonoAttribute()
     {
         return $this->benf_bono_patria == 1 ? 'Activo' : 'Denegado';

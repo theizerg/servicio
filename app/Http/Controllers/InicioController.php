@@ -5,34 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Redirect;
 use DB;
-class HomeController extends Controller
+
+class InicioController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-
-    
-/*    public function hasVote($user_id)
-    {
-         $hasVote = Votante::where('user_id', $user_id)->get();
-
-        return (count($hasVote) > 0) ? true : false ;
-    }
-*/
-
-    public function index()
+     public function index()
     {
        
        
@@ -43,34 +20,30 @@ class HomeController extends Controller
 
         $caballeros = \DB::table('dios_reina')
         ->where('genero_id',1)
-        ->where('nu_edad','>=',30)
-        ->where('nu_edad','<',40)
+        ->whereBetween("nu_edad", [31,40])
+        ->count();
+         
+        $jovenes = \DB::table('dios_reina')
+        ->whereBetween("nu_edad", [15,30])
         ->count();
 
-        $jovenes = \DB::table('dios_reina')
-        ->where('nu_edad','>=',15)
-        ->where('nu_edad','=<',30)
-        ->count();
+        
 
          $niños1 = \DB::table('dios_reina')
-        ->where('nu_edad','>=',0)
-        ->where('nu_edad','<',2)
+        ->whereBetween("nu_edad", [0,2])
         ->count();
         //dd($niños1);
 
          $niños2 = \DB::table('dios_reina')
-        ->where('nu_edad','>=',3)
-        ->where('nu_edad','<',5)
+        ->whereBetween("nu_edad", [3,5])
         ->count();
 
          $niños3 = \DB::table('dios_reina')
-        ->where('nu_edad','>=',6)
-        ->where('nu_edad','<',8)
+        ->whereBetween("nu_edad", [6,8])
         ->count();
 
          $niños4 = \DB::table('dios_reina')
-        ->where('nu_edad','>=',9)
-        ->where('nu_edad','<',10)
+        ->whereBetween("nu_edad", [9,10])
         ->count();
 
 
@@ -80,31 +53,27 @@ class HomeController extends Controller
 
         $caballeros1 = \DB::table('comandante')
         ->where('genero_id',1)
+        ->whereBetween("nu_edad", [31,40])
         ->count();
 
         $jovenes1 = \DB::table('comandante')
-        ->where('nu_edad','>=',15)
-        ->where('nu_edad','=<',30)
+        ->whereBetween("nu_edad", [15,30])
         ->count();
 
          $niños5 = \DB::table('comandante')
-        ->where('nu_edad','>=',0)
-        ->where('nu_edad','<',2)
+        ->whereBetween("nu_edad", [0,2])
         ->count();
 
          $niños6 = \DB::table('comandante')
-        ->where('nu_edad','>=',2)
-        ->where('nu_edad','<',4)
+        ->whereBetween("nu_edad", [3,4])
         ->count();
 
          $niños7 = \DB::table('comandante')
-        ->where('nu_edad','>=',4)
-        ->where('nu_edad','<',6)
+        ->whereBetween("nu_edad", [5,6])
         ->count();
 
          $niños8 = \DB::table('comandante')
-        ->where('nu_edad','>=',6)
-        ->where('nu_edad','<',10)
+        ->whereBetween("nu_edad", [7,10])
         ->count();
 
 
@@ -114,31 +83,27 @@ class HomeController extends Controller
 
         $caballeros2= \DB::table('maria')
         ->where('genero_id',1)
+        ->whereBetween("nu_edad", [31,40])
         ->count();
 
         $jovenes2 = \DB::table('maria')
-        ->where('nu_edad','>=',15)
-        ->where('nu_edad','=<',30)
+        ->whereBetween("nu_edad", [15,30])
         ->count();
 
          $niños9 = \DB::table('maria')
-        ->where('nu_edad','>=',0)
-        ->where('nu_edad','<',2)
+        ->whereBetween("nu_edad", [0,2])
         ->count();
 
          $niños10 = \DB::table('maria')
-        ->where('nu_edad','>=',2)
-        ->where('nu_edad','<',4)
+        ->whereBetween("nu_edad", [3,4])
         ->count();
 
          $niños11 = \DB::table('maria')
-        ->where('nu_edad','>=',4)
-        ->where('nu_edad','<',6)
+        ->whereBetween("nu_edad", [5,6])
         ->count();
 
          $niños12 = \DB::table('maria')
-        ->where('nu_edad','>=',6)
-        ->where('nu_edad','<',10)
+        ->whereBetween("nu_edad", [7,10])
         ->count();
 
 
@@ -170,13 +135,71 @@ class HomeController extends Controller
 
 
         ]);
+ }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
 
-       /* return view('admin.home.index')->with([
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
 
-            'postulados' => $postulados
-        ]);*/
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
-       
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }

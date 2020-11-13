@@ -19,10 +19,10 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         $user = new User;
-        $user->username = 'admin';
-        $user->name = 'Theizer';
+        $user->username = 'acalderon';
+        $user->name = 'Alicia';
         $user->nu_cedula = '25212293';
-        $user->last_name = 'Gonzalez';
+        $user->last_name = 'Calderon';
         $user->email = 'theizerg@gmail.com';
         $user->password = 'admin';
         $user->status = 1; // (1) active (0)disabled

@@ -178,10 +178,55 @@
         <label >CANTIDAD DE BOMBONAS QUE RECIBE</label>
  			<input class="form-control form-bombonas" id="bombonas" type="number" name="nu_cantidad_bombonas" placeholder="Cantidad de bombonas que recibe" oninvalid="this.setCustomValidity('Debe ingresar una razón social para el cliente')" oninput="setCustomValidity('')">
         </div>
+</div>
+<div class="col-md-12 mt-3">
+  <div class="form-group">
+        <label for="status"></label>
+        <div class="checkbox icheck">
+          <label> ESTADO EN LA COMUNIDAD <br><br>
+            <input type="radio" name="status" value="1" checked> ACTIVO&nbsp;&nbsp;
+            <input type="radio" name="status" value="0"> INACTIVO
+          </label>
+        </div>
     </div>
+</div>
 <div class="col-md-12 mt-2">
    <div class="form-group">
 	<label class="" for="txtFecha">Nota</label><br>
 	  {!! Form::textarea('nb_nota', null,array('class' => 'form-control input-sm','placeholder'=>'Ingrese alguna nota','id'=>'nb_nota')) !!}
     </div>
  </div>
+
+
+@push('scripts')
+
+<script>
+      $(function () {
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+      });
+</script>
+<script>
+  $(document).ready(function(){
+
+   $("#benf_bombonas_gas").val() == 0;
+
+   $("#bombonas").hide();
+
+
+    $("#benf_bombonas_gas").on('change', function(){
+        if($("#benf_bombonas_gas").val() == 1){
+          $("#bombonas").show();
+          $("#bombonas").val(1);
+        } else {
+           $("#bombonas").show();
+           $("#bombonas").val(0);
+        }
+      });
+      
+});
+</script>
+@endpush

@@ -10,10 +10,10 @@
       <div class="col-md-6">
         <div class="btn-group">
           @can('add_users')
-          <a href="{{ url('reina') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
+          <a href="{{ url('comandante') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
           @endcan
           @can('add_users')
-          <a href="{{ url('reina/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
+          <a href="{{ url('comandante/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
           @endcan
         </div>
       </div> 
@@ -25,7 +25,7 @@
           <div class="title red-text text-center mt-4">
             Datos para el consejo comunal
           </div>
-           {!! Form::model($reina,  ['route' => ['reina.update',$reina->id],'id'=>'main-form' ,'method' => 'PUT'])!!}
+           {!! Form::model($comandante,  ['route' => ['comandante.update',$comandante->id],'id'=>'main-form' ,'method' => 'PUT'])!!}
            <div class="card-body">
              <div class="row form-group">
                @include('admin.reina.partials.nuevo')
@@ -179,4 +179,32 @@ $(document).ready(function () {
 
 });
 </script>
+<script>
+      $(function () {
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+      });
+</script>
+<script>
+  $(document).ready(function(){
+
+   $("#benf_bombonas_gas").val() == 0;
+
+   $("#bombonas").hide();
+
+
+    $("#benf_bombonas_gas").on('change', function(){
+        if($("#benf_bombonas_gas").val() == 1){
+          $("#bombonas").show();
+          $("#bombonas").val(1);
+        } else {
+           $("#bombonas").show();
+           $("#bombonas").val(0);
+        }
+      });
+      
+});
 @endpush

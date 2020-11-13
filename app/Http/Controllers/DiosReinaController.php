@@ -29,9 +29,21 @@ class DiosReinaController extends Controller
                                  'nacionalidad:nacionalidad.id,nb_nacionalidad',
                                  'identidicacion:tipo_identificacion.id,nb_tipo_identificacion',
                             ])
+        ->where('status',1)
                             ->get();
 
-        return view('admin.reina.index', compact('reinas'));
+        $inactivos = DiosReina::with([
+                                 'genero:genero.id,nb_genero',
+                                 'estadocivil:estado_civil.id,nb_estado_civil',
+                                 'parentezco:parentezco.id,nb_parentezco',
+                                 'edificio:edificio.id,nb_edificio',
+                                 'nacionalidad:nacionalidad.id,nb_nacionalidad',
+                                 'identidicacion:tipo_identificacion.id,nb_tipo_identificacion',
+                            ])
+        ->where('status',0)
+                            ->get();
+
+        return view('admin.reina.index', compact('reinas','inactivos'));
     }
 
     /**
@@ -66,7 +78,9 @@ class DiosReinaController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
         $reina = DiosReina::create($request->all());
+
         return json_encode(['success' => true, 'reina_id' => $reina->encode_id]);
     }
 

@@ -10,10 +10,10 @@
       <div class="col-md-6">
         <div class="btn-group">
           @can('add_users')
-          <a href="{{ url('reina') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
+          <a href="{{ url('maria') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
           @endcan
           @can('add_users')
-          <a href="{{ url('reina/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
+          <a href="{{ url('maria/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
           @endcan
         </div>
       </div> 
@@ -25,7 +25,7 @@
           <div class="title red-text text-center mt-4">
             Datos para el consejo comunal
           </div>
-           {!! Form::model($reina,  ['route' => ['reina.update',$reina->id],'id'=>'main-form' ,'method' => 'PUT'])!!}
+           {!! Form::model($maria,  ['route' => ['maria.update',$maria->id],'id'=>'main-form' ,'method' => 'PUT'])!!}
            <div class="card-body">
              <div class="row form-group">
                @include('admin.reina.partials.nuevo')

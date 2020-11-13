@@ -28,9 +28,21 @@ class MariaController extends Controller
                                  'nacionalidad:nacionalidad.id,nb_nacionalidad',
                                  'identidicacion:tipo_identificacion.id,nb_tipo_identificacion',
                             ])
+         ->where('status',1)
                             ->get();
 
-        return view('admin.maria.index', compact('maria'));
+         $inactivos = Maria::with([
+                                 'genero:genero.id,nb_genero',
+                                 'estadocivil:estado_civil.id,nb_estado_civil',
+                                 'parentezco:parentezco.id,nb_parentezco',
+                                 'edificio:edificio.id,nb_edificio',
+                                 'nacionalidad:nacionalidad.id,nb_nacionalidad',
+                                 'identidicacion:tipo_identificacion.id,nb_tipo_identificacion',
+                            ])
+         ->where('status',0)
+                            ->get();
+
+        return view('admin.maria.index', compact('maria','inactivos'));
     }
 
     /**

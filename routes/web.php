@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::middleware(['auth',])->group(function () {
 
-    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/', 'InicioController@index')->name('home');
     Route::get('user-autocomplete', 'UserController@autocomplete');
     Route::resource('user', 'UserController');
     Route::resource('logins', 'LoginController');

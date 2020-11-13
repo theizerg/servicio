@@ -179,7 +179,7 @@ $(document).ready(function () {
 
 });
 </script>
-<script src="{{ asset('js/admin/reina/create.js') }}"></script>
+
 <script>
       $(function () {
         $('input').iCheck({
